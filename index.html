@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>What's Ahead in Data Architecture for 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Banner Images -->
+  <div class="max-w-5xl mx-auto mt-6">
+    <img src="assets/images/image165a.png" alt="Thursday, December 3 - 11:00 AM PT, 2:00 PM ET" class="w-full">
+  </div>
+  <div class="max-w-5xl mx-auto mt-6">
+    <img src="assets/images/image165b.png" alt="Informatica, Quest, ER/Studio, NexusOne" class="w-full">
+  </div>
+
+  <!-- Title + Register -->
+  <div class="max-w-5xl mx-auto mt-12 px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug mb-8 max-w-3xl mx-auto">
+      What's Ahead in Data Architecture for 2027
+    </h1>
+    <button id="registerBtn"
+      class="mb-12 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-semibold shadow">
+      REGISTER NOW
+    </button>
+  </div>
+
+  <!-- Content -->
+  <div class="max-w-5xl mx-auto text-gray-800 space-y-4 px-4">
+
+    <p>
+      New research shows that successful AI initiatives are driven less by budget and more by readiness: the
+      ability to deliver trusted data, operationalize AI at scale, and govern increasingly complex data and AI
+      ecosystems.
+    </p>
+
+    <p>
+      As organizations look ahead to 2027, many are shifting investment beyond AI models and applications toward
+      the data foundations, orchestration, observability, and governance capabilities required to support AI at
+      scale.
+    </p>
+
+    <p class="font-semibold">
+      Join this roundtable discussion as industry experts explore the trends, technologies, and architectural
+      priorities that will shape 2027.
+    </p>
+
+    <div>
+      <p class="font-semibold">You'll Learn How To:</p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>Build trusted, AI-ready data foundations</li>
+        <li>Support AI and agentic applications at scale</li>
+        <li>Strengthen governance, security, and traceability</li>
+        <li>Evaluate the top data architecture trends for 2027</li>
+      </ul>
+    </div>
+
+    <p>
+      <span id="registerText" class="text-red-600 cursor-pointer hover:underline">Register Now</span>
+      to attend the webinar <span class="font-semibold">What's Ahead in Data Architecture for 2027.</span>
+      <br>
+      Don't miss this live event on <span class="font-semibold">Thursday, December 3, 11 AM PT / 2 PM ET.</span>
+    </p>
+
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer" class="mt-12"></div>
+  <!-- JS -->
+  <script>
+    // Load navbar and footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Register actions
+    function goRegister() {
+      window.open('register.html', '_blank');
+    }
+
+    document.getElementById('registerBtn').addEventListener('click', goRegister);
+    document.getElementById('registerText').addEventListener('click', goRegister);
+  </script>
+
+</body>
+
+</html>
